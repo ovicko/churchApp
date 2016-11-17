@@ -1,16 +1,21 @@
 <?php
 
 /* @var $this yii\web\View */
-
 use yii\helpers\Html;
 
 $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
+	<div class="panel panel-primary">
+    
+ <h3><?php echo $testObj->username  ?></h3>
+   <code> <p><?php echo  date("F j Y, g:i a", strtotime("1479178938"));?></p>
+     <p><?php 
 
-    <p>This is the About page. You may modify the following file to customize its content:</p>
+     echo  $testObj->created_at?></p>
 
-    <code><?= __FILE__ ?></code>
+
+    </code>
+</div>
 </div>

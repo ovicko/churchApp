@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use common\models\User;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -138,7 +139,12 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return $this->render('about');
+        $testObj = User::findOne(['id'=>1]);
+                    //->where(['id'=>1]);
+
+        return $this->render('about', [
+                'testObj' => $testObj,
+            ]);
     }
 
     /**
